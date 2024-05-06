@@ -1,0 +1,709 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+input,
+button {
+    border: none;
+    outline: none;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: 100px;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    background-repeat: repeat;
+}
+
+.container {
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+}
+
+
+.main_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
+
+.search,
+.login {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(20px);
+    padding: 8rem 1.5rem 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .4s;
+}
+
+.search_close,
+.login_close {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    font-size: 1.5rem;
+    color: #000000;
+    cursor: pointer;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 100px;
+    background-color: black;
+    padding: 5px 10px;
+    font-weight: 500;
+    z-index: 100;
+    justify-content: space-between;
+}
+
+.nav {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: hsl(0, 0%, 87%);
+    font-weight: 600;
+    transition: color .4s;
+}
+
+.nav_actions {
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+}
+
+.logo,
+.nav_search,
+.nav_login,
+.nav_close,
+.nav_toggle,
+.nav_link {
+    font-size: 1.25rem;
+    color: aliceblue;
+    cursor: pointer;
+    transition: color .4s;
+}
+
+.logo:hover,
+.nav_search:hover,
+.nav_login:hover,
+.nav_close:hover,
+.nav_toggle:hover,
+.nav_link:hover {
+    color: hsl(230, 9%, 52%);
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+    margin: 0 10px;
+}
+
+ul li a {
+    position: relative;
+    display: block;
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    margin-right: 20px;
+}
+
+ul li a::after {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: -6px;
+    background: aliceblue;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+ul li a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+ul li a:hover {
+    background: #000;
+}
+
+ul li ul.dropdown li {
+    margin: 10px 0;
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+}
+
+.dropdown {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    background: #000;
+    text-align: center;
+    font-weight: 500;
+    padding: 15px;
+}
+
+.dropdown:hover {
+    display: block;
+}
+
+.nav_item:hover.dropdown {
+    display: block;
+}
+
+.dropdown-link {
+    color: #e4dbdb;
+    text-decoration: none;
+}
+
+/* Navigation for mobile devices */
+
+@media screen and (max-width: 1023px) {
+    .nav_menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        /* border: 2px solid aliceblue; */
+        padding-block: 4.5rem 4rem;
+        transition: top .4s;
+    }
+}
+
+.nav_list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+    text-align: center;
+}
+
+.nav_close {
+    position: absolute;
+    top: 1.15rem;
+    right: 1.5rem;
+}
+
+.show-menu {
+    top: 0;
+}
+
+.search_form {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    background-color: hsl(230, 14%, 60%);
+    box-shadow: 0 8px 32px hsl(230, 75%, 15%, .2);
+    padding-inline: 1rem;
+    border-radius: .5rem;
+    transform: translateY(-16px);
+    transition: transform .4s;
+}
+
+.search_icon {
+    font-size: 1.25rem;
+}
+
+.search_input {
+    width: 100%;
+    padding: 1rem;
+}
+
+.search_input::placeholder {
+    color: #000;
+    font-size: 16px;
+}
+
+.show-search {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.show-search .search_form {
+    transform: translateY(0);
+}
+
+.login_form {
+    background-color: hsla(0, 2%, 20%, 0.434);
+    padding: 32px 24px 40px;
+    border-radius: 15px;
+    row-gap: 32px;
+    text-align: center;
+    display: grid;
+    transform: translateY(-16px), translateX(0);
+    transition: transform .4s, transform .18s ease;
+}
+
+.login_form h2 {
+    font-size: 32px;
+    text-align: center;
+}
+
+
+.login_group {
+    display: grid;
+    row-gap: 16px;
+}
+
+.login_label {
+    display: block;
+    text-align: initial;
+    color: #000;
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 7px;
+}
+
+.input {
+    width: 100%;
+    background-color: rgb(239, 244, 244);
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 13px;
+    outline: none;
+}
+
+.input::placeholder {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.LogReg_btn {
+    display: inline-block;
+    width: 100%;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 9px;
+    padding: 7px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: .4s;
+}
+
+.LogReg_btn:hover {
+    background-color: #000;
+    color: aliceblue;
+}
+
+.remember-forgot {
+    font-size: 0.9em;
+    font-weight: 600;
+    margin: -15px 0 15px 0;
+    justify-content: space-between;
+    display: flex;
+}
+
+.remember-forgot label input {
+    accent-color: #000;
+    margin-right: 3px;
+    border-radius: 5px;
+}
+
+.remember-forgot a {
+    color: #000;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.login-register {
+    font-size: 0.9em;
+    text-align: center;
+    font-weight: 600;
+    margin: 25px 0 10px 0;
+}
+
+.login-register p a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
+
+.show-login {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+
+section {
+    padding: 100px 200px;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url("/project images/tennis.webp") no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.main h3 {
+    color: #fff;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.main-btn {
+    color: #fff;
+    background-color: #3a6cf4;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    transition: 0.7s ease;
+}
+
+.main-btn:hover {
+    background-color: #0a49f6;
+    transform: scale(1.1);
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: #3a6cf4;
+    font-size: 2.2em;
+    font-weight: 0;
+    margin-bottom: 30px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background-color: #000016;
+    width: -21em;
+    box-shadow: 0 5px 25px rgba(1, 1, 1, 15%);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 40px;
+    transition: 0.9s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card .icon {
+    color: #fff;
+    font-size: 8em;
+    text-align: center;
+}
+
+.info {
+    text-align: center;
+}
+
+.info h3 {
+    color: #3a6cf4;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.info p {
+    color: #fff;
+}
+
+.players {
+    background-color: #000016;
+}
+
+.players .content {
+    margin-top: 30px;
+}
+
+.players-card {
+    background-color: #fff;
+    border: 1px solid #fff;
+    min-height: 14em;
+    width: 23em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.7s ease;
+}
+
+.players-card:hover {
+    transform: scale(1.1);
+}
+
+.players-card:hover .project-image {
+    opacity: 0.9;
+}
+
+.players-image img {
+    width: 100%
+}
+
+.players-info {
+    padding: 1em;
+}
+
+.players-category {
+    font-size: 0.8em;
+    color: #000;
+}
+
+.players-title {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.more-details {
+    text-decoration: none;
+    color: #3a6cf4;
+}
+
+.more-details:hover {
+    color: #601cfc;
+}
+
+.players {
+    background-color: #000016;
+}
+
+.rank {
+    background-color: #000016;
+}
+
+.rank .content {
+    margin-top: 30px;
+}
+
+.rank-card {
+    background-color: #fff;
+    border: 1px solid #fff;
+    min-height: 14em;
+    width: 23em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.7s ease;
+}
+
+.rank-card:hover {
+    transform: scale(1.1);
+}
+
+.rank-card:hover .project-image {
+    opacity: 0.9;
+}
+
+.rank-image img {
+    width: 100%
+}
+
+.rank-info {
+    padding: 1em;
+}
+
+.rank-info h3 {
+    color: #3a6cf4;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.rank-category {
+    font-size: 0.8em;
+    color: #000;
+}
+
+.rank-title {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.rank {
+    background-color: #000016;
+}
+
+.rank .content {
+    margin-top: 30px;
+}
+
+/****** footer *****/
+
+footer {
+    background: #000000;
+    color: #ffffff;
+    padding: 30px;
+}
+
+footer h2 {
+    padding: 10px 0;
+}
+
+footer p {
+    padding: 10px 0;
+    line-height: 1.3;
+}
+
+.footer-left,
+.footer-right {
+    margin: 0 20px;
+}
+
+.footer-right i {
+    font-size: 1.8rem;
+    color: #808080;
+}
+
+.footer-right input {
+    font-size: 18px;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: #808080;
+    padding-right: 10px;
+    width: 100%;
+}
+
+.footer-right div {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 200px;
+    padding: 10px 0;
+    border-bottom: 1.6px solid #808080;
+}
+
+footer .rights {
+    text-align: center;
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px) {
+    .search,
+    .login {
+        padding-top: 10rem;
+    }
+
+    .search_form {
+        max-width: 450px;
+        margin-inline: auto;
+    }
+
+    .search_close,
+    .login_close {
+        width: max-content;
+        top: 5rem;
+        left: 0;
+        right: 0;
+        margin-inline: auto;
+        font-size: 2rem;
+    }
+
+    .login_form {
+        max-width: 400px;
+        margin-inline: auto;
+    }
+}
+
+/* For large devices */
+@media screen and (min-width: 1023px) {
+    .nav {
+        column-gap: 3rem;
+    }
+
+    .nav_close,
+    .nav_toggle {
+        display: none;
+    }
+
+    .nav_menu {
+        margin-left: auto;
+    }
+
+    .nav_list {
+        flex-direction: row;
+        column-gap: 3rem;
+    }
+
+    .login_form {
+        padding: 3rem 2rem 3.5rem;
+    }
+}
+
+@media screen and (min-width: 1150px) {
+    .container {
+        margin-inline: auto;
+    }
+}

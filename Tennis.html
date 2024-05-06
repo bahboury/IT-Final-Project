@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <link rel="stylesheet" href="Tennis.css">
+    <title>SportSpot</title>
+    <link rel="shortcut icon" href="/project images/website logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">SportSpot</a>
+
+            <div class="nav_menu" id="nav-menu">
+                <ul class="nav_list">
+                    <li class="nav_item">
+                        <a href="index.html" class="nav_link">Home</a>
+                    </li>
+
+                    <li class="nav_item">
+                        <a href="#" class="nav_link">Sports</a>
+                        <ul class="dropdown">
+                            <li><a href="Football.html" class="dropdown-link">Soccer</a></li>
+                            <li><a href="Basket.html" class="dropdown-link">Basket</a></li>
+                            <li><a href="Tennis.html" class="dropdown-link">Tennis</a></li>
+                            <li><a href="Swimming.html" class="dropdown-link">Swimming</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav_item">
+                        <a href="About.html" class="nav_link">About Us</a>
+                    </li>
+
+                    <li class="nav_item">
+                        <a href="contact.html" class="nav_link">Contact Us</a>
+                    </li>
+                </ul>
+
+                <!-- Close button -->
+                <div class="nav_close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav_actions">
+                <!-- Search button -->
+                <i class="ri-search-line nav_search" id="search-btn"></i>
+
+                <!-- Login button -->
+                <i class="ri-user-line nav_login" id="login_btn"></i>
+
+                <!-- Toggle button -->
+                <div class="nav_toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+
+        <!--==================== SEARCH ====================-->
+        <div class="search" id="search">
+            <form action="" class="search_form">
+                <i class="ri-search-line search_icon"></i>
+                <input type="search" placeholder="What are you looking for?" class="search_input">
+            </form>
+
+            <i class="ri-close-line search_close" id="search_close"></i>
+        </div>
+
+        <!--==================== LOGIN ====================-->
+        <div class="login" id="login">
+            <form action="" class="login_form">
+                <h2>Log In</h2>
+
+                <div class="login_group">
+                    <div>
+                        <label for="email" class="login_label">Email</label>
+                        <input type="email" placeholder="Write your email" id="email" class="input">
+                    </div>
+                    <div>
+                        <label for="password" class="login_label">Password</label>
+                        <input type="password" placeholder="Enter your password" id="password" class="input" required>
+                    </div>
+                </div>
+
+                <div class="login-register">
+                    <p>Don't have an account?
+                        <a href="#" class="register-link">Register</a>
+                    </p>
+                </div>
+
+                <div class="remember-forgot">
+                    <label>
+                        <input type="checkbox" id="remember-me">Remember me
+                    </label>
+                    <a href="#">Forgot password</a>
+                </div>
+
+                <button type="submit" class="LogReg_btn">Log In</button>
+            </form>
+
+            <i class="ri-close-line login_close" id="login_close"></i>
+        </div>
+    </header>
+    <section class="main">
+        <div>
+            <a href="#rankmen" class="main-btn"> Top Three Ranking players 2024(Men) </a> <br>
+            <a href="#rankwoman" class="main-btn"> Top Three Ranking players 2024(Woman) </a>
+        </div>
+
+
+    </section>
+    <section class="card" id="Tournaments">
+        <h2 class="title">Tournaments</h2>
+        <div class="content">
+            <div class="card">
+                <div class="icon">
+                    <img src="/project images/270px-Australian_Open_Logo_2017.svg.png" alt="error">
+                </div>
+                <div class="info">
+                    <h3>Australian Open</h3>
+                    <p>The Australian Open is a tennis tournament held annually at Melbourne Park in Melbourne,
+                        Victoria, Australia. The tournament is the first of the four Grand Slam tennis events held each
+                        year, preceding the French Open, Wimbledon and the US Open</p>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <img src="/project images/Logo_Roland-Garros.svg.png" alt="error">
+                </div>
+                <div class="info">
+                    <h3>French Open</h3>
+                    <p>The French Open , also known as Roland-Garros , is a major tennis tournament held over two weeks
+                        at the Stade Roland Garros in Paris, France, beginning in late May each year. The tournament and
+                        venue are named after the French aviator Roland Garros.</p>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <img src="/project images/Wimbledon.svg.png" alt="">
+                </div>
+                <div class="info">
+                    <h3>Wimbledon Championships</h3>
+                    <p>The Championships, commonly known simply as Wimbledon,is the oldest tennis tournament in the
+                        world and is regarded by many as the most prestigious It has been held at the All England Lawn
+                        Tennis and Croquet Club in Wimbledon, London, since 1877 and is played on outdoor grass courts,
+                        with retractable roofs over the two main courts </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="players" id="players">
+        <h2 class="title">players</h2>
+        <div class="content">
+            <div class="players-card">
+                <div class="players-image">
+                    <img src="/project images/roooof.jpg" />
+                </div>
+                <div class="players-info">
+                    <p class="players-category">Rafael Nadal</p>
+                    <strong class="players-title">
+                        <span>88 Championships</span>
+                        <a href="https://en.wikipedia.org/wiki/Rafael_Nadal" class="more-details">More details</a>
+                    </strong>
+                </div>
+            </div>
+            <div class="players-card">
+                <div class="players-image">
+                    <img src="/project images/R (1).jpg" />
+                </div>
+                <div class="players-info">
+                    <p class="players-category">Novak Djokovic</p>
+                    <strong class="players-title">
+                        <span>93 Championships</span>
+                        <a href="https://en.wikipedia.org/wiki/Novak_Djokovic" class="more-details">More details</a>
+                    </strong>
+                </div>
+            </div>
+            <div class="players-card">
+                <div class="players-image">
+                    <img src="/project images/roger-federer.avif" />
+                </div>
+                <div class="players-info">
+                    <p class="players-category">Roger Federer</p>
+                    <strong class="players-title">
+                        <span>97 Championships</span>
+                        <a href="https://en.wikipedia.org/wiki/Roger_Federer" class="more-details">More details</a>
+                    </strong>
+                </div>
+            </div>
+    </section>
+    <section class="cards rank" id="rankmen">
+        <h2 class="title"> Top Three Ranking players 2024(Men)</h2>
+        <div class="content">
+            <div class="rank-card">
+                <div class="rank-image">
+                    <img src="/project images/novak.jpg" />
+                </div>
+                <div class="rank-info">
+                    <h3 class="rank-category"> 1-Novak Djokovic</h3>
+                    <strong class="rank-title">
+                        <span>9,990 Points</span>
+                    </strong>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="rank-card">
+                <div class="rank-image">
+                    <img src="/project images/OIP (22222.jpg" />
+                </div>
+                <div class="rank-info">
+                    <h3 class="rank-category"> 2-Jannik Sinner</h3>
+                    <strong class="rank-title">
+                        <span>8,660 Points</span>
+                    </strong>
+                </div>
+            </div>
+
+            <div lass="content">
+                <div class="rank-card">
+                    <div class="rank-image">
+                        <img src="/project images/R (3).jpg" />
+                    </div>
+                    <div class="rank-info">
+                        <h3 class="rank-category"> 3-Carlos Alcaraz</h3>
+                        <strong class="rank-title">
+                            <span>8,145 Points</span>
+                        </strong>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="cards rank" id="rankwoman">
+        <h2 class="title"> Top Three Ranking players 2024(Woman)</h2>
+        <div class="content">
+            <div class="rank-card">
+                <div class="rank-image">
+                    <img src="/project images/R (4).jpg" />
+                </div>
+                <div class="rank-info">
+                    <h3 class="rank-category"> 1-Iga Swiatek</h3>
+                    <strong class="rank-title">
+                        <span>10560 Points</span>
+                    </strong>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="rank-card">
+                <div class="rank-image">
+                    <img src="/project images/aryna-sabalenka-2.avif" />
+                </div>
+                <div class="rank-info">
+                    <h3 class="rank-category"> 2-Aryna Sabalenka</h3>
+                    <strong class="rank-title">
+                        <span>7848 Points</span>
+                    </strong>
+                </div>
+            </div>
+            <div class="content">
+                <div class="rank-card">
+                    <div class="rank-image">
+                        <img src="/project images/R (6).jpg" />
+                    </div>
+                    <div class="rank-info">
+                        <h3 class="rank-category"> 3-Coco Gauff</h3>
+                        <strong class="rank-title">
+                            <span>7258 Points</span>
+                        </strong>
+                    </div>
+                </div>
+                
+    </section>
+        <!--==================== Footer ====================-->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-left">
+                    <h2>SPORTNEWS</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur molestias aut blanditiis totam
+                        quia enim, autem tenetur cum facere, fugit beatae at voluptas ipsum perferendis!</p>
+                </div>
+    
+                <div class="footer-right">
+                    <h2>Newletter</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident, autem!</p>
+    
+                    <div>
+                        <input type="text" placeholder="Email Address">
+                        <i class="ri-mail-line"></i>
+                    </div>
+                </div>
+            </div>
+            <p class="rights">Copyright &copy; 2024 All rights reserved</p>
+        </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

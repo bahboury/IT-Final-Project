@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+    <link rel="stylesheet" href="contact.css">
+    <title>SportSpot</title>
+    <link rel="shortcut icon" href="/project images/website logo.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">SportSpot</a>
+
+            <div class="nav_menu" id="nav-menu">
+                <ul class="nav_list">
+                    <li class="nav_item">
+                        <a href="index.html" class="nav_link">Home</a>
+                    </li>
+
+                    <li class="nav_item">
+                        <a href="#" class="nav_link">Sports</a>
+                        <ul class="dropdown">
+                            <li><a href="Football.html" class="dropdown-link">Soccer</a></li>
+                            <li><a href="Basket.html" class="dropdown-link">Basket</a></li>
+                            <li><a href="Tennis.html" class="dropdown-link">Tennis</a></li>
+                            <li><a href="Swimming.html" class="dropdown-link">Swimming</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav_item">
+                        <a href="About.html" class="nav_link">About Us</a>
+                    </li>
+
+                    <li class="nav_item">
+                        <a href="contact.html" class="nav_link">Contact Us</a>
+                    </li>
+                </ul>
+
+                <!-- Close button -->
+                <div class="nav_close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav_actions">
+                <!-- Search button -->
+                <i class="ri-search-line nav_search" id="search-btn"></i>
+
+                <!-- Login button -->
+                <i class="ri-user-line nav_login" id="login_btn"></i>
+
+                <!-- Toggle button -->
+                <div class="nav_toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+
+        <!--==================== SEARCH ====================-->
+        <div class="search" id="search">
+            <form action="" class="search_form">
+                <i class="ri-search-line search_icon"></i>
+                <input type="search" placeholder="What are you looking for?" class="search_input">
+            </form>
+
+            <i class="ri-close-line search_close" id="search_close"></i>
+        </div>
+
+        <!--==================== LOGIN ====================-->
+        <div class="login" id="login">
+            <form action="" class="login_form">
+                <h2>Log In</h2>
+
+                <div class="login_group">
+                    <div>
+                        <label for="email" class="login_label">Email</label>
+                        <input type="email" placeholder="Write your email" id="email" class="input">
+                    </div>
+                    <div>
+                        <label for="password" class="login_label">Password</label>
+                        <input type="password" placeholder="Enter your password" id="password" class="input" required>
+                    </div>
+                </div>
+
+                <div class="login-register">
+                    <p>Don't have an account?
+                        <a href="register.html" class="register-link">Register</a>
+                    </p>
+                </div>
+
+                <div class="remember-forgot">
+                    <label>
+                        <input type="checkbox" id="remember-me">Remember me
+                    </label>
+                    <a href="#">Forgot password</a>
+                </div>
+
+                <button type="submit" class="LogReg_btn">Log In</button>
+            </form>
+
+            <i class="ri-close-line login_close" id="login_close"></i>
+        </div>
+    </header>
+    <!--==================== Section ====================-->
+    <section class="contact">
+        <div class="contact_us">
+            <h2>contact us</h2>
+            <div class="contact-wrapper">
+                <div class="contact-form">
+                    <h3>send us a message</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="your name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="your email">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="your message"></textarea>
+                        </div>
+                        <button id="send-button" type="submit">send message</button>
+                        <p id="message" style="display:none;"></p>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>contact information</h3>
+                    <p>
+                        <i class="ri-phone-fill"></i> 0123456789
+                    </p><br>
+                    <p>
+                        <i class="ri-mail-fill"></i> info@ahmedelkeraby.com
+                    </p><br>
+                    <p>
+                        <i class="ri-map-pin-fill"></i> 123 street, obour, egypt
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--==================== Footer ====================-->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <h2>SPORTNEWS</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur molestias aut blanditiis totam
+                    quia enim, autem tenetur cum facere, fugit beatae at voluptas ipsum perferendis!</p>
+            </div>
+
+            <div class="footer-right">
+                <h2>Newletter</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident, autem!</p>
+
+                <div>
+                    <input type="text" placeholder="Email Address">
+                    <i class="ri-mail-line"></i>
+                </div>
+            </div>
+        </div>
+        <p class="rights">Copyright &copy; 2024 All rights reserved</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

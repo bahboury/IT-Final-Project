@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+    <link rel="stylesheet" href="About.css">
+    <title>SportSpot</title>
+    <link rel="shortcut icon" href="/project images/website logo.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">SportSpot</a>
+
+            <div class="nav_menu" id="nav-menu">
+                <ul class="nav_list">
+                    <li class="nav_item">
+                        <a href="index.html" class="nav_link">Home</a>
+                    </li>
+
+                    <li class="nav_item">
+                        <a href="#" class="nav_link">Sports</a>
+                        <ul class="dropdown">
+                            <li><a href="Football.html" class="dropdown-link">Soccer</a></li>
+                            <li><a href="Basket.html" class="dropdown-link">Basket</a></li>
+                            <li><a href="Tennis.html" class="dropdown-link">Tennis</a></li>
+                            <li><a href="Swimming.html" class="dropdown-link">Swimming</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav_item">
+                        <a href="About.html" class="nav_link">About Us</a>
+                    </li>
+
+                    <li class="nav_item">
+                        <a href="contact.html" class="nav_link">Contact Us</a>
+                    </li>
+                </ul>
+
+                <!-- Close button -->
+                <div class="nav_close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav_actions">
+                <!-- Search button -->
+                <i class="ri-search-line nav_search" id="search-btn"></i>
+
+                <!-- Login button -->
+                <i class="ri-user-line nav_login" id="login_btn"></i>
+
+                <!-- Toggle button -->
+                <div class="nav_toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+
+        <!--==================== SEARCH ====================-->
+        <div class="search" id="search">
+            <form action="" class="search_form">
+                <i class="ri-search-line search_icon"></i>
+                <input type="search" placeholder="What are you looking for?" class="search_input">
+            </form>
+
+            <i class="ri-close-line search_close" id="search_close"></i>
+        </div>
+
+        <!--==================== LOGIN ====================-->
+        <div class="login" id="login">
+            <form action="" class="login_form">
+                <h2>Log In</h2>
+
+                <div class="login_group">
+                    <div>
+                        <label for="email" class="login_label">Email</label>
+                        <input type="email" placeholder="Write your email" id="email" class="input">
+                    </div>
+                    <div>
+                        <label for="password" class="login_label">Password</label>
+                        <input type="password" placeholder="Enter your password" id="password" class="input" required>
+                    </div>
+                </div>
+
+                <div class="login-register">
+                    <p>Don't have an account?
+                        <a href="register.html" class="register-link">Register</a>
+                    </p>
+                </div>
+
+                <div class="remember-forgot">
+                    <label>
+                        <input type="checkbox" id="remember-me">Remember me
+                    </label>
+                    <a href="#">Forgot password</a>
+                </div>
+
+                <button type="submit" class="LogReg_btn">Log In</button>
+            </form>
+
+            <i class="ri-close-line login_close" id="login_close"></i>
+        </div>
+    </header>
+    <!--==================== About ====================-->
+    <section class="About">
+        <div class="main">
+            <img src="/project images/website logo.png">
+            <div class="about-text">
+                <h1> About Us </h1>
+                <h5> sport<span>&spot</span></h5>
+                <p> Welcome to our sports-centric platform! We are passionate about the world of sports and its ability
+                    to bring people together. Our mission is to create an engaging and inclusive space where sports
+                    enthusiasts can connect, share, and celebrate their love for various athletic pursuits.
+                    We believe that sports have the power to inspire, unite, and transform lives. Through our platform,
+                    we aim to showcase the spirit of sportsmanship, the thrill of competition, and the incredible
+                    achievements of athletes from all walks of life.
+                    Our dedicated team is committed to providing you with up-to-date news, captivating stories, and
+                    expert insights from the sports world. We cover a diverse range of sports, including team games,
+                    individual sports, extreme sports, and everything in between.
+                    Whether you're a die-hard fan, an aspiring athlete, or simply someone who appreciates the beauty and
+                    drama of sports, we invite you to join our community. Together, let's celebrate the incredible world
+                    of sports and the positive impact it has on our lives. Thank you for being a part of our journey!
+                </p>
+                <button type="button">let's talk</button>
+            </div>
+        </div>
+    </section>
+    <!--==================== Footer ====================-->
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <h2>SPORTNEWS</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur molestias aut blanditiis totam
+                    quia enim, autem tenetur cum facere, fugit beatae at voluptas ipsum perferendis!</p>
+            </div>
+
+            <div class="footer-right">
+                <h2>Newletter</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident, autem!</p>
+
+                <div>
+                    <input type="text" placeholder="Email Address">
+                    <i class="ri-mail-line"></i>
+                </div>
+            </div>
+        </div>
+        <p class="rights">Copyright &copy; 2024 All rights reserved</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

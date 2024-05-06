@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+    <title>SportSpot</title>
+    <link rel="shortcut icon" href="/project images/website logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="Swimming.css">
+</head>
+
+<body>
+    <header id="head">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav_link">Sports</a>
+                        <ul class="dropdown">
+                            <li><a href="Football.html" class="dropdown-link">Soccer</a></li>
+                            <li><a href="Basket.html" class="dropdown-link">Basket</a></li>
+                            <li><a href="Tennis.html" class="dropdown-link">Tennis</a></li>
+                            <li><a href="Swimming.html" class="dropdown-link">Swimming</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="Swimranking.html">Ranking</a>
+                    </li>
+                    <li>
+                        <a href="SwimPoints.html">Points</a>
+                    </li>
+                    <li>
+                        <img src="/project images/sun.png" alt="Sun" id="icon">
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+
+    <!-- ------------------------------------------------ Start Points ----------------------------------------------------------- -->
+    <div id="Points" class="p-container">
+        <div class="points">
+            <h2>SWIMMING POINTS</h2>
+            <p>The World Aquatics Points Table allows comparisons of results among different events. The World Aquatics
+                Point Scoring assigns point values to swimming performances, more points for world class performances
+                typically 1000 or more and fewer points for slower performances.</p>
+            <p>Point values are assigned every year. The charts have one set of points for <strong>Short Course</strong>
+                and
+                another for <strong>Long Course</strong>. </p>
+            <h3> </h3>
+            <h3>FORMULA</h3>
+            <p>The points are calculated using a cubic curve. With the swim time (T) and the base time (B) in seconds
+                the
+                points (P) are calculated with the following formula:</p>
+            <h3 class="rule">P = 1000 * ( B / T )3</h3>
+            <p> </p>
+            <p><strong>The exact formula is used to calculate points from times.</strong> Then all point values are
+                truncated to the integer number. In point tables named with years 2009 and earlier, the point values are
+                rounded.</p>
+            <p>If the needed time (T) for a certain number of points (P) should be calculated, the exact formula is used
+                to
+                calculate a first estimation. Then the time should be reduced by one hundredth of a second as long as
+                the
+                reverse calculation with the time still results in the original number of points.</p>
+            <h3>BASE TIMES FOR 1000 POINTS</h3>
+            <p>The base times are define for<strong> all common individual events and relays</strong>, separated for men
+                /
+                women and long course / short course.</p>
+            <p><strong>The base times are defined every year</strong>, based on the latest World Record that was
+                approved by
+                World Aquatics. For short course <strong>(SCM)</strong> the base times are defined with the <strong>cut
+                    of
+                    date of August 31st</strong>. For long course <strong>(LCM)</strong> the base times are defined at
+                the
+                end of the year <strong>(December 31st)</strong>. </p>
+            <p>For "World Aquatics Point Scoring 2023" this means for example: Short course times until "31 Aug 2024",
+                long
+                course times until "31 Dec 2023".</p>
+            <p><strong>The base times are published</strong> on the World Aquatics website within <strong>one month
+                    after
+                    the end of the relevant period</strong>.</p>
+            <p>Below files mention the formula for calculating World Aquatics points , the base time used in the formula
+                and
+                the points that would be allotted to athletes for achieving a particular timing in LCM or SCM.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <h2>SPORTNEWS</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur molestias aut blanditiis totam
+                    quia enim, autem tenetur cum facere, fugit beatae at voluptas ipsum perferendis!</p>
+            </div>
+
+            <div class="footer-right">
+                <h2>Newletter</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident, autem!</p>
+
+                <div>
+                    <input type="text" placeholder="Email Address">
+                    <i class="ri-mail-line"></i>
+                </div>
+            </div>
+        </div>
+        <p class="rights">Copyright &copy; 2024 All rights reserved</p>
+    </footer>
+
+    <script>
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function () {
+            document.body.classList.toggle("white-theme");
+            if (document.body.classList.contains("white-theme")) {
+                icon.src = "images/moon.png";
+            } else {
+                icon.src = "images/sun.png";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
