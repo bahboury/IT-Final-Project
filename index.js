@@ -58,21 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Tennis website
 let tennis = document.getElementById('tennis')
 window.onscroll = function () {
-
     let value = scrollY;
     console.log(value)
     stars.style.left = value + 'px'
-}
-
-// Swimming website
-
-var icon = document.getElementById("icon");
-
-icon.onclick = function () {
-    document.body.classList.toggle("white-theme");
-    if (document.body.classList.contains("white-theme")) {
-        icon.src = "/project images/moon.png";
-    } else {
-        icon.src = "/project images/sun.png";
-    }
 }

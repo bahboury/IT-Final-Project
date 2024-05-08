@@ -9,9 +9,9 @@ html {
 }
 
 body {
-    background-image: linear-gradient(#16384c,
-            rgb(47, 50, 95),
-            #2f495f);
+    background-image: linear-gradient(#bebfbf,
+    rgb(76, 76, 76),
+    #000000);
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
 }
